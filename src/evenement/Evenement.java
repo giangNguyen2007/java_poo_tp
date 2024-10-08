@@ -1,6 +1,6 @@
 package evenement;
 
-public abstract class Evenement {
+public abstract class Evenement implements Comparable<Evenement>{
     private long date;
 
     public Evenement(long date) {
@@ -12,4 +12,10 @@ public abstract class Evenement {
     }
 
     public abstract void execute();
+
+
+    @Override
+    public int compareTo(Evenement e) {
+        return (int)this.date - (int)e.getDate();
+    }
 }
