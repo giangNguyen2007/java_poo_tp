@@ -1,3 +1,5 @@
+package environment;
+
 public class Incendie {
     private Case position;
 

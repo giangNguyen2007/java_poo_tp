@@ -1,3 +1,8 @@
+import robot.*;
+import environment.Carte;
+import environment.Case;
+import environment.Direction;
+import interaction.DonneeSimulation;
 
 public class TestDonneSimulation {
 
@@ -6,8 +11,8 @@ public class TestDonneSimulation {
 
         Carte carte = new Carte(20, 7, 10);
 
-        Robot rb1 = new RobotNormal(0, carte.getCase(2, 2), 10);
-        Robot rb2 = new RobotNormal(1, carte.getCase(3, 4), 10);
+        Robot rb1 = new RobotRoue(0, carte.getCase(2, 2), 10);
+        Robot rb2 = new RobotRoue(1, carte.getCase(3, 4), 10);
 
         Robot[] robots = new Robot[] {rb1, rb2};
 

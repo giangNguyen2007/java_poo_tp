@@ -194,7 +194,7 @@ public class LecteurDonnees {
      */
     private void lireRobot(int i) throws DataFormatException {
         ignorerCommentaires();
-        System.out.print("Robot " + i + ": ");
+        System.out.print("robot " + i + ": ");
 
         try {
             int lig = scanner.nextInt();

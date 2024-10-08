@@ -1,7 +1,15 @@
+import robot.RobotRoue;
+import robot.Robot;
+import environment.Carte;
+import environment.Case;
+import evenement.Evenement;
+import evenement.MoveRobotEvenement;
 import gui.GUISimulator;
 import gui.Rectangle;
 import gui.Simulable;
 import gui.Text;
+import environment.Direction;
+import interaction.DonneeSimulation;
 
 import java.util.ArrayList;
 
@@ -16,8 +24,8 @@ public class TestSimulateur {
 
         Carte carte = new Carte(20, 7, 10);
 
-        Robot rb1 = new RobotNormal(0, carte.getCase(2, 2), 10);
-        Robot rb2 = new RobotNormal(1, carte.getCase(3, 4), 10);
+        Robot rb1 = new RobotRoue(0, carte.getCase(2, 2), 10);
+        Robot rb2 = new RobotRoue(1, carte.getCase(3, 4), 10);
 
         Robot[] robots = new Robot[] {rb1, rb2};
 

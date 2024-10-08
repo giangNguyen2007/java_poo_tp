@@ -1,3 +1,8 @@
+package evenement;
+
+import environment.Direction;
+import interaction.*;
+
 public class MoveRobotEvenement extends Evenement {
     private DonneeSimulation donneeSimulation;
     private int robotId;
