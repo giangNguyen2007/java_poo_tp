@@ -1,21 +1,41 @@
 package evenement;
 
+import simulation.DonneeSimulation;
+
 public abstract class Evenement implements Comparable<Evenement>{
-    private long date;
+    protected int robotId;
+    protected long startDate;
 
-    public Evenement(long date) {
-        this.date = date;
+    protected EvenementState state;
+
+    public Evenement(long startDate, int robotId) {
+        this.state = EvenementState.NOT_STARTED;
+        this.startDate = startDate;
+        this.robotId = robotId;
     }
 
-    public long getDate() {
-        return date;
+    public long getStartDate() {
+        return startDate;
     }
 
-    public abstract void execute();
+    public void setStartDate(long startDate) {
+        this.startDate = startDate;
+    }
+
+    public int getRobotId(){ return robotId;}
+    public abstract void launchExcution(DonneeSimulation d);
+    public abstract void finishExecution();
 
 
     @Override
+    // return positif if event starts earlier
     public int compareTo(Evenement e) {
-        return (int)this.date - (int)e.getDate();
+        if (this.startDate > e.getStartDate()){
+            return 1;
+        } else if (this.startDate < e.getStartDate()){
+            return -1;
+        } else {
+            return 0;
+        }
     }
 }

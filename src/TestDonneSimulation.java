@@ -1,8 +1,7 @@
-import robot.*;
-import environment.Carte;
-import environment.Case;
-import environment.Direction;
-import interaction.DonneeSimulation;
+import simulation.robot.*;
+import simulation.environment.Carte;
+import simulation.environment.Case;
+import simulation.DonneeSimulation;
 
 public class TestDonneSimulation {
 
@@ -22,7 +21,6 @@ public class TestDonneSimulation {
 
         System.out.println("Hello " + c.getLigne() + " " + c.getColonne());
 
-        donneeSimulation.moveRobot(1, Direction.EST);
 
         c = donneeSimulation.getRobotPosition(1);
 
